@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Postman',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        fontFamily: 'Muli',
       ),
       home: MainScreen(),
     );
@@ -18,14 +20,26 @@ class MyApp extends StatelessWidget {
 class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var divheight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(70.0),
         child: Container(
-          color: Colors.red,
-          child: Row(
-            children: <Widget>[Text("teste")],
+          alignment: Alignment.bottomCenter,
+          color: Hexcolor("#002d6d"),
+          child: SafeArea(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  "Mr.Postman",
+                  style: GoogleFonts.muli(
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.white),
+                )
+              ],
+            ),
           ),
         ),
       ),
