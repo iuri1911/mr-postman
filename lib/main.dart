@@ -28,16 +28,28 @@ class MainScreen extends StatelessWidget {
           color: Hexcolor("#002d6d"),
           child: SafeArea(
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
+                IconButton(
+                  icon: Icon(Icons.menu),
+                  iconSize: 40.0,
+                  color: Colors.white,
+                  onPressed: () {},
+                ),
                 Text(
                   "Mr.Postman",
                   style: GoogleFonts.muli(
                       fontSize: 24.0,
                       fontWeight: FontWeight.w900,
                       color: Colors.white),
-                )
+                ),
+                IconButton(
+                  icon: Icon(Icons.settings),
+                  iconSize: 30.0,
+                  color: Colors.white,
+                  onPressed: () {},
+                ),
               ],
             ),
           ),
